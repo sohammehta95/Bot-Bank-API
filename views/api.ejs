@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" href="api.css" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Bot<span>BANK</span></h1>
+    <h2>A REST API for getting user information</h2>
+  </header>
+  
+  <section class="form">
+   <section id="sec">
+  <!--for demo wrap-->
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+       <th>Verb</th>
+      <th>Route</th>
+      <th>Description</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+       <tbody>
+    <tr>
+      <td>GET</td>
+      <td>/api/users</td>
+      <td>See all the users</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>/api/users</td>
+      <td>Post a new user</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/users/:userId</td>
+      <td>Get one user</td>
+    </tr>
+    <tr>
+      <td>PUT</td>
+      <td>/api/users/:userId</td>
+      <td>Update one user</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>/api/users/:userId</td>
+      <td>Delete one user</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/users/fbid/:fbId</td>
+      <td>Get one user by FB id(senderId)</td>
+    </tr>
+    <tr>
+      <td>PUT</td>
+      <td>/api/users/fbid/:fbId</td>
+      <td>Update one user by FB id</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>/api/users/fbid/:fbId</td>
+      <td>Delete one user by FB id</td>
+    </tr>
+         </tbody>
+  </table>
+  </div>
+</section>
+  </section>
+  <!--<section class="form">-->
+  <!--  <input type="text" id="todoInput" placeholder="Insert your task here...">-->
+  <!--</section>-->
+
+  <!--<ul class="list">-->
+  <!--</ul>-->
+
+<div id="mybutton">
+<a class="github-button" href="https://github.com/sohammehta95/Bot-Bank-API" data-size="large" aria-label="Fork sohammehta95/Node-Todo on GitHub">Repo</a>
+</div>
+
+<script type="text/javascript" src="app.js"></script>
+</body>

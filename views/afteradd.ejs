@@ -1,0 +1,133 @@
+<head>
+    <link rel="stylesheet" href="help.css" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+</head>
+<body>
+  <header>
+    <h1>Bot<span>BANK</span></h1>
+    <h2>Client Added</h2>
+  </header>
+  
+  
+  <div id="app">
+    <div class="box">
+        <center>
+        <h1> Client Name : <%= client.clientName %></h1>
+        
+        <% 
+        
+        var total = 0; 
+        client.companies.forEach(function(comp){
+           total+=comp.net; 
+        
+        }) 
+        
+        var inv = 0; 
+        client.companies.forEach(function(comp){
+           inv+=comp.investment; 
+        
+        }) 
+        
+        var port = 0; 
+        client.companies.forEach(function(comp){
+           port+=comp.currValue; 
+        
+        }) 
+        
+
+        %>
+        <br>
+        <h3>Total Investment: <%= "$" + inv.toFixed(2)  %></h3>
+        <h3>Total Portfolio Value: <%= "$" + port.toFixed(2)  %></h3>
+        <br>
+        <h2>Total P/L: <%= "$" + total.toFixed(2)  %></h2>
+      
+      </center>
+    </div>
+    
+    <section class="form">
+   <section id="sec">
+     <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+       <th><center><%=client.companies[0].comName %></center></th>
+      <th><center><%=client.companies[1].comName %></center></th>
+      <th><center><%=client.companies[2].comName %></center></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+       <tbody>
+    <tr>
+      <td>
+          <pre>
+Symbol : <%=client.companies[0].index %>
+Current Price: <%=client.companies[0].currPrice %>
+
+Quantity : <%=client.companies[0].quantity %>
+Bought Price: <%=client.companies[0].boughtPrice %>
+
+Total Investment : <%=client.companies[0].investment %>
+Total Current Value : <%=client.companies[0].currValue %>
+
+Net P/L :  <%=client.companies[0].net.toFixed(2) %>
+          </pre>
+      </td>
+      <td>
+      <pre>
+Symbol : <%=client.companies[1].index %>
+Current Price: <%=client.companies[1].currPrice %>
+
+Quantity : <%=client.companies[1].quantity %>
+Bought Price: <%=client.companies[1].boughtPrice %>
+
+Total Investment : <%=client.companies[1].investment %>
+Total Current Value : <%=client.companies[1].currValue %>
+
+Net P/L :  <%=client.companies[1].net.toFixed(2) %>
+          </pre>
+        </td>
+      <td>
+          <pre>
+Symbol : <%=client.companies[2].index %>
+Current Price: <%=client.companies[2].currPrice %>
+
+Quantity : <%=client.companies[2].quantity %>
+Bought Price: <%=client.companies[2].boughtPrice %>
+
+Total Investment : <%=client.companies[2].investment %>
+Total Current Value : <%=client.companies[2].currValue %>
+
+Net P/L :  <%=client.companies[2].net.toFixed(2) %>
+          </pre>
+      </td>
+    </tr>
+         </tbody>
+  </table>
+  
+  </section>
+  </section>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+
+
+<script type="text/javascript" src="helpscript.js"></script>
+</body>

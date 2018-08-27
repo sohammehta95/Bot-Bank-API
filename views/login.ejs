@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" href="signup.css" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+</head>
+<body>
+  <header>
+    <h1>Bot<span>BANK</span></h1>
+    <h2>Advisor Login</h2>
+  </header>
+  
+  <form class="form" action="/login" method="post">
+             
+            <input class="todoInput" type="email" id ="email" name="email"  placeholder="Email" required/>
+            <br><br>
+            <input class="todoInput" type="password" id ="pass" name="pass"  placeholder="Password" required/>
+            
+            <input name="senderId" type="hidden" id="fbid">
+            
+            <br><br><br>
+            
+            <center>
+            <input id="signupbut" type="submit" value="Login">
+            </center>
+            
+  </form>
+
+  <ul class="list">
+  </ul>
+
+<script>
+  $(document).ready(function() {
+   var url = document.URL;
+
+   
+   var fbid = url.substring(url.indexOf('?')+1);
+   var parts = fbid.split( '=', 2 );
+
+   console.log(parts); 
+   console.log("Im here getting senderId ");
+   
+   document.getElementById('fbid').setAttribute('value',parts[1])
+});
+</script>
+</body>
