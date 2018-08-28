@@ -18,33 +18,11 @@
         <center>
         <h1> Client Name : <%= client.clientName %></h1>
         
-        <% 
-        
-        var total = 0; 
-        client.companies.forEach(function(comp){
-           total+=comp.net; 
-        
-        }) 
-        
-        var inv = 0; 
-        client.companies.forEach(function(comp){
-           inv+=comp.investment; 
-        
-        }) 
-        
-        var port = 0; 
-        client.companies.forEach(function(comp){
-           port+=comp.currValue; 
-        
-        }) 
-        
-
-        %>
         <br>
-        <h3>Total Investment: <%= "$" + inv.toFixed(2)  %></h3>
-        <h3>Total Portfolio Value: <%= "$" + port.toFixed(2)  %></h3>
+        <h3>Total Investment: <%= "$" + client.clientInvestment.toFixed(2)  %></h3>
+        <h3>Total Portfolio Value: <%= "$" + client.clientPortfolio.toFixed(2)  %></h3>
         <br>
-        <h2>Total P/L: <%= "$" + total.toFixed(2)  %></h2>
+        <h2>Total P/L: <%= "$" + client.clientNet.toFixed(2)  %></h2>
       
       </center>
     </div>

@@ -78,12 +78,19 @@ exports.makeUser = function(req, res)
                   ]
                   
         };
+        newClient.clientInvestment = 0;
+        newClient.clientPortfolio = 0;
+        newClient.clientNet = 0;
         
         for(var x=0;x<=2;x++)
         {
           newClient.companies[x].investment = newClient.companies[x].boughtPrice * newClient.companies[x].quantity;
           newClient.companies[x].currValue = newClient.companies[x].currPrice * newClient.companies[x].quantity;
           newClient.companies[x].net = newClient.companies[x].currValue - newClient.companies[x].investment;
+          
+          newClient.clientInvestment+= newClient.companies[x].investment;
+          newClient.clientPortfolio+= newClient.companies[x].currValue;
+          newClient.clientNet+=newClient.companies[x].net;
         }
         
         
