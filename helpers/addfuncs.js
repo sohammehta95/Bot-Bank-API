@@ -50,6 +50,7 @@ exports.makeUser = function(req, res)
           }
                
         }
+        if(bP1==-1) bP1= value[comp1].chart[value[comp1].chart.length-1].date;
         
         for(var i=0;i<value[comp2].chart.length;i++)
         {
@@ -64,6 +65,7 @@ exports.makeUser = function(req, res)
           }
                
         }
+        if(bP2==-1) bP2= value[comp2].chart[value[comp2].chart.length-1].date;
         
         for(var i=0;i<value[comp3].chart.length;i++)
         {
@@ -78,7 +80,7 @@ exports.makeUser = function(req, res)
           }
              
         }
-        
+        if(bP3==-1) bP3= value[comp3].chart[value[comp3].chart.length-1].date;
         
         var newClient = {
                     
