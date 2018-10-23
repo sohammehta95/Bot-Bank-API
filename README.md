@@ -13,7 +13,7 @@ Add Clients and See the Portfolio Value: https://bot-bank-api.herokuapp.com/add?
 
 ## Chatbot Interaction
 
-The chatbot is powered by Google Dialogflow which handles the query and helps the banker get real-time client information
+The chatbot handles the user query and helps the banker get real-time client information simply by chatting
 
 ![api](mess.png)
   
