@@ -5,7 +5,7 @@ An API to get clients real-time investment information. Bank advisors can intera
 Link: https://bot-bank-api.herokuapp.com/api
 
 
-![api](api.png)
+![api](api2.png)
 
 ## Chatbot Interaction
 
